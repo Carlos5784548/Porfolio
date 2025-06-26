@@ -35,6 +35,7 @@ const Navbar = () => {
     { name: "Sobre Mí", href: "#about" },
     { name: "Habilidades", href: "#skills" },
     { name: "Experiencia", href: "#experience" },
+    { name: "Proyectos", href: "#projects" },
     { name: "Educación", href: "#education" },
     { name: "Contacto", href: "#contact" },
   ]

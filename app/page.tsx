@@ -127,6 +127,7 @@ export default function Home() {
                   <Badge className="bg-slate-700">CSS3</Badge>
                   <Badge className="bg-slate-700">Bootstrap</Badge>
                   <Badge className="bg-slate-700">React</Badge>
+                  <Badge className="bg-slate-700">Angular</Badge>
                 </div>
               </CardContent>
             </Card>
@@ -139,6 +140,8 @@ export default function Home() {
                   <Badge className="bg-slate-700">Microservicios</Badge>
                   <Badge className="bg-slate-700">JWT</Badge>
                   <Badge className="bg-slate-700">Spring Security</Badge>
+                  <Badge className="bg-slate-700">Node.js</Badge>
+                  <Badge className="bg-slate-700">Express</Badge>
                 </div>
               </CardContent>
             </Card>
@@ -220,6 +223,96 @@ export default function Home() {
                 </ul>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Projects Section */}
+      <section id="projects" className="py-20 bg-slate-50">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold mb-12 text-center">Proyectos Destacados</h2>
+
+          <div className="max-w-4xl mx-auto">
+            <Card className="overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+              <div className="md:flex">
+                <div className="md:w-1/3 bg-gradient-to-br from-slate-600 to-slate-800 p-8 flex items-center justify-center">
+                  <div className="text-white text-center">
+                    <div className="w-16 h-16 bg-white/20 rounded-lg flex items-center justify-center mx-auto mb-4">
+                      <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 20 20">
+                        <path
+                          fillRule="evenodd"
+                          d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"
+                          clipRule="evenodd"
+                        />
+                      </svg>
+                    </div>
+                    <h3 className="text-xl font-bold">Task Manager</h3>
+                    <p className="text-slate-200">Full Stack App</p>
+                  </div>
+                </div>
+
+                <div className="md:w-2/3 p-8">
+                  <div className="mb-4">
+                    <h3 className="text-2xl font-bold mb-2">Aplicación de Gestión de Tareas</h3>
+                    <p className="text-slate-600 mb-4">
+                      Una aplicación full-stack completa para la gestión de tareas personales con sistema de
+                      autenticación y operaciones CRUD. Permite a los usuarios registrarse, iniciar sesión y administrar
+                      sus tareas de manera eficiente.
+                    </p>
+                  </div>
+
+                  <div className="mb-6">
+                    <h4 className="font-semibold mb-2">Características principales:</h4>
+                    <ul className="list-disc pl-5 space-y-1 text-slate-600">
+                      <li>Sistema de autenticación completo (registro e inicio de sesión)</li>
+                      <li>CRUD completo para gestión de tareas</li>
+                      <li>Interfaz de usuario responsive y moderna</li>
+                      <li>API RESTful robusta y escalable</li>
+                      <li>Validación de datos tanto en frontend como backend</li>
+                    </ul>
+                  </div>
+
+                  <div className="mb-6">
+                    <h4 className="font-semibold mb-3">Tecnologías utilizadas:</h4>
+                    <div className="flex flex-wrap gap-2 mb-4">
+                      <Badge variant="outline">Angular</Badge>
+                      <Badge variant="outline">Node.js</Badge>
+                      <Badge variant="outline">Express</Badge>
+                      <Badge variant="outline">TypeScript</Badge>
+                      <Badge variant="outline">JWT</Badge>
+                      <Badge variant="outline">MySQL</Badge>
+                      <Badge variant="outline">HTML5</Badge>
+                      <Badge variant="outline">CSS3</Badge>
+                    </div>
+                  </div>
+
+                  <div className="flex flex-wrap gap-3">
+                    <Button asChild className="bg-slate-900 hover:bg-slate-800">
+                      <a
+                        href="https://github.com/Carlos5784548/Fullstack-Challenge-Frontend"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-2"
+                      >
+                        <GitHub className="h-4 w-4" />
+                        Frontend
+                      </a>
+                    </Button>
+                    <Button asChild className="bg-slate-900 hover:bg-slate-800">
+                      <a
+                        href="https://github.com/Carlos5784548/Fullstack-Challenge-Backend"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-2"
+                      >
+                        <GitHub className="h-4 w-4" />
+                        Backend
+                      </a>
+                    </Button>
+                  </div>
+                </div>
+              </div>
+            </Card>
           </div>
         </div>
       </section>
