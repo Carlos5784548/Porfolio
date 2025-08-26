@@ -920,7 +920,7 @@ export default function Home() {
                 },
                 {
                   icon: GitHub,
-                  href: "https://github.com",
+                  href: "https://github.com/Carlos5784548",
                   gradient: "from-slate-500 to-slate-600",
                 },
                 {
