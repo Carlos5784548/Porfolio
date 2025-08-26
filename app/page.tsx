@@ -6,7 +6,7 @@ import {
   ChevronDown,
   Mail,
   Linkedin,
-  GitlabIcon as GitHub,
+  Github as GitHub,
   MapPin,
   Phone,
   Calendar,
@@ -218,7 +218,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
             <Card className="group hover:shadow-2xl transition-all duration-300 border-0 bg-white/80 backdrop-blur-sm hover:-translate-y-2">
               <CardContent className="pt-8 pb-6">
                 <div className="flex items-center gap-4 mb-6">
@@ -299,6 +299,9 @@ export default function Home() {
                   <Badge className="bg-gradient-to-r from-slate-600 to-slate-700 hover:from-slate-700 hover:to-slate-800 transition-all">
                     Express
                   </Badge>
+                  <Badge className="bg-gradient-to-r from-orange-600 to-orange-700 hover:from-orange-700 hover:to-orange-800 transition-all">
+                    Laravel
+                  </Badge>
                 </div>
               </CardContent>
             </Card>
@@ -370,6 +373,31 @@ export default function Home() {
                   </Badge>
                   <Badge className="bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 transition-all">
                     Inglés (básico)
+                  </Badge>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="group hover:shadow-2xl transition-all duration-300 border-0 bg-white/80 backdrop-blur-sm hover:-translate-y-2">
+              <CardContent className="pt-8 pb-6">
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="p-3 bg-gradient-to-br from-pink-500 to-pink-600 rounded-xl">
+                    <Code className="h-6 w-6 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold text-slate-900">IA & Automatización</h3>
+                </div>
+                <div className="flex flex-wrap gap-2">
+                  <Badge className="bg-gradient-to-r from-purple-600 to-purple-700 hover:from-purple-700 hover:to-purple-800 transition-all">
+                    Agentes de IA
+                  </Badge>
+                  <Badge className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 transition-all">
+                    n8n
+                  </Badge>
+                  <Badge className="bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 transition-all">
+                    Automatización
+                  </Badge>
+                  <Badge className="bg-gradient-to-r from-amber-600 to-amber-700 hover:from-amber-700 hover:to-amber-800 transition-all">
+                    No-Code
                   </Badge>
                 </div>
               </CardContent>

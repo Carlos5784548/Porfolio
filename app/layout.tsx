@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   title: "Carlos Trod - Desarrollador Full Stack",
   description:
     "Portfolio profesional de Carlos Trod, Desarrollador Full Stack especializado en Java, PHP, HTML, CSS y más.",
-    generator: 'v0.dev'
+    generator: 'v0.app'
 }
 
 export default function RootLayout({
