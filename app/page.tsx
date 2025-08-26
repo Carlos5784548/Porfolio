@@ -309,10 +309,10 @@ export default function Home() {
             <Card className="group hover:shadow-2xl transition-all duration-300 border-0 bg-white/80 backdrop-blur-sm hover:-translate-y-2">
               <CardContent className="pt-8 pb-6">
                 <div className="flex items-center gap-4 mb-6">
-                  <div className="p-3 bg-gradient-to-br from-amber-500 to-amber-600 rounded-xl">
+                  <div className="p-3 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl">
                     <Shield className="h-6 w-6 text-white" />
                   </div>
-                  <h3 className="text-xl font-bold text-slate-900">DevOps/Herramientas</h3>
+                  <h3 className="text-xl font-bold text-slate-900">DevOps</h3>
                 </div>
                 <div className="flex flex-wrap gap-2">
                   <Badge className="bg-gradient-to-r from-slate-600 to-slate-700 hover:from-slate-700 hover:to-slate-800 transition-all">
