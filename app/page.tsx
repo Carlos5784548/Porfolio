@@ -8,7 +8,6 @@ import {
   Linkedin,
   Github as GitHub,
   MapPin,
-  Phone,
   Calendar,
   Code,
   Database,
@@ -16,6 +15,7 @@ import {
   Shield,
   Briefcase,
   GraduationCap,
+  Gift as Git,
 } from "lucide-react"
 
 export default function Home() {
@@ -108,14 +108,6 @@ export default function Home() {
               </div>
               <a href="mailto:carlospedrotrod@gmail.com" className="font-medium">
                 carlospedrotrod@gmail.com
-              </a>
-            </div>
-            <div className="flex items-center gap-3 text-slate-600">
-              <div className="p-2 bg-green-50 rounded-lg">
-                <Phone className="h-4 w-4 text-green-600" />
-              </div>
-              <a href="tel:+5426045144451" className="font-medium hover:text-green-600 transition-colors">
-                +54 2604 514451
               </a>
             </div>
             <div className="flex items-center gap-3 text-slate-600">
@@ -309,8 +301,8 @@ export default function Home() {
             <Card className="group hover:shadow-2xl transition-all duration-300 border-0 bg-white/80 backdrop-blur-sm hover:-translate-y-2">
               <CardContent className="pt-8 pb-6">
                 <div className="flex items-center gap-4 mb-6">
-                  <div className="p-3 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl">
-                    <Shield className="h-6 w-6 text-white" />
+                  <div className="p-3 bg-gradient-to-br from-slate-600 to-slate-700 rounded-xl">
+                    <Git className="h-6 w-6 text-white" />
                   </div>
                   <h3 className="text-xl font-bold text-slate-900">DevOps</h3>
                 </div>
@@ -801,13 +793,6 @@ export default function Home() {
                     value: "carlospedrotrod@gmail.com",
                     href: "mailto:carlospedrotrod@gmail.com",
                     gradient: "from-blue-500 to-blue-600",
-                  },
-                  {
-                    icon: Phone,
-                    label: "Teléfono",
-                    value: "+54 2604 514451",
-                    href: "tel:+5426045144451",
-                    gradient: "from-green-500 to-green-600",
                   },
                   {
                     icon: Linkedin,
