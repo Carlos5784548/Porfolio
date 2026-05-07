@@ -43,7 +43,7 @@ const Navbar = () => {
   return (
     <nav
       className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? "bg-white shadow-md py-2" : "bg-transparent py-4"}`}
-    >
+      style={isScrolled ? { backdropFilter: 'blur(10px)', backgroundColor: 'rgba(255, 255, 255, 0.8)' } : {}}    >
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center">
           <Link href="/" className={`text-xl font-bold ${isScrolled ? "text-slate-900" : "text-white"}`}>
@@ -56,9 +56,8 @@ const Navbar = () => {
               <a
                 key={link.name}
                 href={link.href}
-                className={`${
-                  isScrolled ? "text-slate-700 hover:text-slate-900" : "text-white/80 hover:text-white"
-                } transition-colors`}
+                className={`${isScrolled ? "text-slate-700 hover:text-slate-900" : "text-white/80 hover:text-white"
+                  } transition-colors`}
               >
                 {link.name}
               </a>

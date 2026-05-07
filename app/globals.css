@@ -44,6 +44,7 @@ html {
   * {
     @apply border-border;
   }
+
   body {
     @apply bg-background text-foreground;
   }
@@ -52,4 +53,189 @@ html {
 /* Custom styles */
 section {
   scroll-margin-top: 80px;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1a202c;
+  /* Dark background for the track */
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #00ff00, #00cc00);
+  /* Neon green gradient */
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(to bottom, #00cc00, #009900);
+  /* Darker neon green on hover */
+}
+
+/* Glitch Effect for Hero Name */
+.glitch {
+  position: relative;
+  animation: glitch-anim 2s infinite alternate-reverse;
+}
+
+.glitch::before,
+.glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.glitch::before {
+  left: 2px;
+  text-shadow: -2px 0 #ff00c1;
+  animation: glitch-anim-left 2s infinite alternate-reverse;
+}
+
+.glitch::after {
+  left: -2px;
+  text-shadow: -2px 0 #00f0ff;
+  animation: glitch-anim-right 2s infinite alternate-reverse;
+}
+
+@keyframes glitch-anim {
+  0% {
+    transform: translate(0);
+  }
+
+  20% {
+    transform: translate(-2px, 2px);
+  }
+
+  40% {
+    transform: translate(-2px, -2px);
+  }
+
+  60% {
+    transform: translate(2px, 2px);
+  }
+
+  80% {
+    transform: translate(2px, -2px);
+  }
+
+  100% {
+    transform: translate(0);
+  }
+}
+
+@keyframes glitch-anim-left {
+  0% {
+    clip-path: inset(0 0 0 0);
+  }
+
+  20% {
+    clip-path: inset(10% 0 80% 0);
+  }
+
+  40% {
+    clip-path: inset(40% 0 30% 0);
+  }
+
+  60% {
+    clip-path: inset(70% 0 10% 0);
+  }
+
+  80% {
+    clip-path: inset(20% 0 60% 0);
+  }
+
+  100% {
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+@keyframes glitch-anim-right {
+  0% {
+    clip-path: inset(0 0 0 0);
+  }
+
+  20% {
+    clip-path: inset(80% 0 10% 0);
+  }
+
+  40% {
+    clip-path: inset(20% 0 70% 0);
+  }
+
+  60% {
+    clip-path: inset(50% 0 20% 0);
+  }
+
+  80% {
+    clip-path: inset(10% 0 80% 0);
+  }
+
+  100% {
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+/* Neon Glow for Project Cards */
+.neon-glow-green {
+  box-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00, 0 0 15px #00ff00, 0 0 20px #00ff00, 0 0 25px #00ff00;
+}
+
+.neon-glow-cyan {
+  box-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff, 0 0 15px #00ffff, 0 0 20px #00ffff, 0 0 25px #00ffff;
+}
+
+/* Neon Badge */
+.neon-badge-cyan {
+  @apply inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2;
+  background-color: rgba(0, 255, 255, 0.2);
+  /* Cyan with transparency */
+  color: #00ffff;
+  /* Neon cyan text */
+  border-color: #00ffff;
+  /* Neon cyan border */
+  box-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff;
+  /* Neon glow */
+}
+
+/* Loading Screen */
+.loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #1a202c;
+  /* Dark background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  font-family: var(--font-fira-code);
+  color: #00ff00;
+  /* Neon green text */
+  font-size: 1.25rem;
+}
+
+.terminal-text::after {
+  content: '|';
+  animation: blink-caret .75s step-end infinite;
+}
+
+@keyframes blink-caret {
+
+  from,
+  to {
+    border-color: transparent
+  }
+
+  50% {
+    border-color: #00ff00;
+  }
 }
