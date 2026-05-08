@@ -1,3 +1,4 @@
+import React from 'react';
 import { useEffect, useRef } from 'react';
 import { useInView, useMotionValue, useSpring } from 'framer-motion';
 
@@ -17,9 +18,17 @@ const AnimatedCounter: React.FC<AnimatedCounterProps> = ({ from, to, suffix = ''
         if (inView) {
             motionValue.set(to);
         }
-    }, [motionValue, inView, to]);
+    }, [inView, motionValue, to]);
 
-    return <span ref={ref}>{springValue.to((latest) => Math.round(latest) + suffix)}</span>;
+    useEffect(() => {
+        return springValue.on("change", (latest) => {
+            if (ref.current) {
+                ref.current.textContent = Math.round(latest).toString() + suffix;
+            }
+        });
+    }, [springValue, suffix]);
+
+    return <span ref={ref}>{from}{suffix}</span>;
 };
 
 export default AnimatedCounter;

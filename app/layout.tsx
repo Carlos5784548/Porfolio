@@ -4,8 +4,6 @@ import type { Metadata } from "next"
 import { Inter, Fira_Code } from "next/font/google"
 import { ThemeProvider } from "@/components/theme-provider"
 import Navbar from "@/components/navbar"
-import LoadingScreen from "@/components/loading-screen"
-import { useState, useEffect } from "react"
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -22,19 +20,9 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
-  const [isLoading, setIsLoading] = useState(true);
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setIsLoading(false);
-    }, 2000); // 2 seconds loading screen
-    return () => clearTimeout(timer);
-  }, []);
-
   return (
     <html lang="es" suppressHydrationWarning className={`${firaCode.variable}`}>
-      <body className={`${inter.className} ${isLoading ? 'overflow-hidden' : ''}`}>
-        {isLoading && <LoadingScreen />}
+      <body className={inter.className}>
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange>
           <Navbar />
           {children}
